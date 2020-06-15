@@ -1,0 +1,109 @@
+body{
+  margin: 0;
+  animation: animate-stripes 60s linear infinite;
+  background-image: url("stars.jpg");
+  background-size: 300px 300px;
+}
+
+div#meters > div {
+  margin: 0 0 -5px 0;
+}
+
+div#meters div.value {
+  display: none;
+}
+
+meter {
+  width: 97%;
+  height: 350px;
+  -moz-appearance: none;
+  background: none;
+}
+
+#instant meter {
+  position: absolute;
+}
+#slow meter {
+  position: absolute;
+  top: 225px;
+}
+#clip meter {
+  position: absolute;
+  top: 500px;
+}
+
+div#grass {
+    height: 120%;
+    width: 20%;
+    position: absolute;
+    background-image: url("grass.png");
+    background-size: 109%;
+background-position: 0px -45px;
+left: -40px;
+}
+
+#AudioEnableButton {
+  width : 100%;
+  background-color: #2d5f6f;
+  border: none;
+  color: #001a28;
+  font-family: monospace;
+  font-size: 20pt;
+  padding: 30px;
+}
+
+@keyframes animate-stripes {
+  to { background-position: -50px 0; }
+}
+
+/*chrome*/
+meter::-webkit-meter-bar {
+  background: none;
+  border: none;
+}
+
+#instant meter::-webkit-meter-optimum-value, #instant meter::-webkit-meter-even-less-good-value, #instant meter::-webkit-meter-suboptimum-value{
+  box-shadow: none;
+  background-image: url("1.png");
+  background-size:  stretch;
+  background-position: 0px;
+  background-color: transparent;
+}
+
+#slow meter::-webkit-meter-optimum-value, #slow meter::-webkit-meter-even-less-good-value, #slow meter::-webkit-meter-suboptimum-value{
+  box-shadow: none;
+  background-image: url("2.png");
+  background-size:  stretch;
+  background-position: 0px;
+  background-color: transparent;
+}
+
+#clip meter::-webkit-meter-optimum-value, #clip meter::-webkit-meter-even-less-good-value, #clip meter::-webkit-meter-suboptimum-value{
+  box-shadow: none;
+  background-image: url("3.png");
+  background-size:  stretch;
+  background-position: 0px;
+  background-color: transparent;
+}
+
+/*mozilla*/
+#instant meter::-moz-meter-bar {
+  box-shadow: none;
+  background-image: url("1.png");
+  background-size:  stretch;
+  background-position: 30px -30px;
+}
+
+#slow meter::-moz-meter-bar {
+  box-shadow: none;
+  background-image: url("2.png");
+  background-position: 0px -30px;
+}
+
+#clip meter::-moz-meter-bar {
+  box-shadow: none;
+  background-image: url("3.png");
+  background-position: 20px -30px ;
+}
+
+

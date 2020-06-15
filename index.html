@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+ *  Made by Hille Dussel with special thanks to The WebRTC project authors for the javascript. 
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Buzz Pollination">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <base target="_blank">
+
+    <title>Buzz Pollination</title>
+
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="main.css"/>
+</head>
+
+<body>
+
+    <div id="grass"></div>
+
+<div id="container">
+	<button id="AudioEnableButton" onclick="enableAudio()">Click here to enable Audio</button>
+    <div id="meters">
+        <div id="instant">
+            <div class="label"></div>
+            <meter max="0.25" value="0"></meter>
+            <div class="value"></div>
+        </div>
+        <div id="slow">
+            <div class="label"></div>
+            <meter max="0.15" value="0"></meter>
+            <div class="value"></div>
+        </div>
+        <div id="clip">
+            <div class="label"></div>
+            <meter max="0.001" value="0"></meter>
+            <div class="value"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="soundmeter.js"></script>
+<script src="main.js" async></script>
+
+</body>
+</html>
